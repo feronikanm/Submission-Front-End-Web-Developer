@@ -2,14 +2,17 @@ import clubs from './clubs.js';
 
 class DataSource {
     static searchClub(keyword) {
-        return new Promise((resolve, reject) => {
-            const filteredClubs = clubs.filter(club => club.name.toUpperCase().includes(keyword.toUpperCase()));
-            if (filteredClubs.length) {
-                resolve(filteredClubs);
+        return fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${keyword}`)
+        .then(response => {
+            return response.json();
+        })
+        .then(responseJson => {
+            if(responseJson.meals) {
+                return Promise.resolve(responseJson.meals);
             } else {
-                reject(`${keyword} is not found"`);
+                return Promise.reject(`${keyword} is not found`);
             }
-        });
+        })
     }
  }
 

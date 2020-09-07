@@ -27,10 +27,15 @@ class ClubItem extends HTMLElement {
                 }
                 
                 .fan-art-club {
-                    width: 100%;
-                    max-height: 600px;
+                    margin-top: 25px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 60%;
+                    max-height: 500px;
                     object-fit: cover;
                     object-position: center;
+                    border-radius: 20px;
                 }
                 
                 .club-info {
@@ -50,10 +55,13 @@ class ClubItem extends HTMLElement {
                     -webkit-line-clamp: 10; /* number of lines to show */
                 }
             </style>
-            <img class="fan-art-club" src="${this._club.mealThumb}" alt="Fan Art">
+            <img class="fan-art-club" src="${this._club.strMealThumb}" alt="Fan Art">
             <div class="club-info">
-                <h2>${this._club.name}</h2>
-                <p>${this._club.instructions}</p>
+                <h2>${this._club.strMeal}</h2>
+                <p><b>Area : </b>${this._club.strArea}</p>
+                <p><b>Category : </b>${this._club.strCategory}</p>
+                <p><b>Instructions : </b></p>
+                <p>${this._club.strInstructions}</p>
             </div>`;
     }
  }
