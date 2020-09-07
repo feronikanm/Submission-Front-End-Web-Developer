@@ -36,6 +36,7 @@ class ClubItem extends HTMLElement {
                     object-fit: cover;
                     object-position: center;
                     border-radius: 20px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                 }
                 
                 .club-info {
@@ -57,7 +58,7 @@ class ClubItem extends HTMLElement {
             </style>
             <img class="fan-art-club" src="${this._club.strMealThumb}" alt="Fan Art">
             <div class="club-info">
-                <h2>${this._club.strMeal}</h2>
+                <h2><b>${this._club.strMeal}</b></h2>
                 <p><b>Area : </b>${this._club.strArea}</p>
                 <p><b>Category : </b>${this._club.strCategory}</p>
                 <p><b>Instructions : </b></p>
