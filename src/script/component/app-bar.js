@@ -28,7 +28,7 @@ class AppBar extends HTMLElement {
                 padding: 16px;
             }
         </style>
-        <h2>Club Finder</h2>`;
+        <h2>Meal Finder</h2>`;
     }
  }
   
